@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Indústria 4.0 B2B | Portal Premium</title>
+    <meta
+      name="description"
+      content="Portal B2B de Indústria 4.0 com catálogo, checkout, orçamento e dashboards."
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="bg-orb bg-orb-a"></div>
+    <div class="bg-orb bg-orb-b"></div>
+
+    <header class="topbar">
+      <div class="brand" role="button" tabindex="0" data-nav="home">
+        <span class="brand-mark">I4</span>
+        <div>
+          <strong>IndustriaHub</strong>
+          <small>B2B • Smart Factory</small>
+        </div>
+      </div>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">☰</button>
+
+      <nav class="main-nav" id="mainNav">
+        <button data-nav="home">Início</button>
+        <button data-nav="catalog">Produtos</button>
+        <button data-nav="catalog">Categorias</button>
+        <button data-nav="solutions">Soluções</button>
+        <button data-nav="education">Indústria 4.0</button>
+        <button data-nav="about">Sobre nós</button>
+        <button data-nav="contact">Contato</button>
+      </nav>
+
+      <div class="topbar-actions">
+        <label class="search-box">
+          <span>⌕</span>
+          <input id="globalSearch" type="search" placeholder="Buscar produtos..." />
+        </label>
+        <button class="icon-btn" data-nav="favorites" aria-label="Favoritos">♡</button>
+        <button class="icon-btn" data-nav="cart" aria-label="Carrinho">🛒 <span id="cartCount">0</span></button>
+        <button class="ghost-btn">Entrar</button>
+        <button class="primary-btn">Criar conta</button>
+      </div>
+    </header>
+
+    <main class="app">
+      <section class="page active" id="homePage">
+        <section class="hero card">
+          <div class="hero-copy">
+            <span class="eyebrow">Portal B2B de Indústria 4.0</span>
+            <h1>Tecnologia para transformar sua indústria.</h1>
+            <p>
+              Encontre sensores, automação, robôs colaborativos, software industrial e soluções
+              inteligentes para modernizar sua operação com mais eficiência e confiabilidade.
+            </p>
+            <div class="hero-actions">
+              <button class="primary-btn" data-nav="catalog">Explorar produtos</button>
+              <button class="secondary-btn" data-nav="solutions">Conhecer soluções</button>
+            </div>
+            <div class="hero-kpis">
+              <div><strong>20+</strong><span>produtos</span></div>
+              <div><strong>12</strong><span>categorias</span></div>
+              <div><strong>15</strong><span>pedidos</span></div>
+            </div>
+          </div>
+          <div class="hero-visual">
+            <div class="factory-scene">
+              <div class="screen screen-a"></div>
+              <div class="screen screen-b"></div>
+              <div class="robot robot-a"></div>
+              <div class="robot robot-b"></div>
+              <div class="conveyor"></div>
+              <div class="grid-lines"></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="card-section">
+          <div class="section-head">
+            <div>
+              <span class="eyebrow">Explore por categoria</span>
+              <h2>Catálogo especializado para operações industriais</h2>
+            </div>
+            <button class="link-btn" data-nav="catalog">Ver tudo</button>
+          </div>
+          <div class="category-grid" id="categoryGrid"></div>
+        </section>
+
+        <section class="card-section">
+          <div class="section-head">
+            <div>
+              <span class="eyebrow">Produtos em destaque</span>
+              <h2>Itens prontos para integrar sua planta</h2>
+            </div>
+            <button class="link-btn" data-nav="catalog">Catálogo completo</button>
+          </div>
+          <div class="product-grid" id="featuredGrid"></div>
+        </section>
+
+        <section class="split-grid">
+          <article class="card panel">
+            <span class="eyebrow">O que é Indústria 4.0?</span>
+            <h3>Conectividade, automação e inteligência em tempo real</h3>
+            <div class="pill-grid" id="educationGrid"></div>
+          </article>
+          <article class="card panel">
+            <span class="eyebrow">Encontre a solução para o seu desafio</span>
+            <div class="problem-list" id="problemList"></div>
+          </article>
+        </section>
+      </section>
+
+      <section class="page" id="catalogPage">
+        <section class="card section-shell">
+          <div class="section-head">
+            <div>
+              <span class="eyebrow">Página de produtos</span>
+              <h2>Catálogo completo</h2>
+            </div>
+            <span class="result-count" id="resultCount"></span>
+          </div>
+
+          <div class="catalog-toolbar">
+            <label class="search-box search-wide">
+              <span>⌕</span>
+              <input id="catalogSearch" type="search" placeholder="Busque por produto, código, marca ou categoria..." />
+            </label>
+            <select id="sortSelect"></select>
+            <button class="secondary-btn" data-nav="quote">Solicitar orçamento</button>
+          </div>
+
+          <div class="filter-layout">
+            <aside class="filters card">
+              <h3>Filtros</h3>
+              <div id="filterList" class="filter-list"></div>
+            </aside>
+            <div>
+              <div class="product-grid" id="catalogGrid"></div>
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <section class="page" id="productPage">
+        <section class="card section-shell product-detail" id="productDetail"></section>
+      </section>
+
+      <section class="page" id="cartPage">
+        <section class="card section-shell">
+          <div class="section-head">
+            <div>
+              <span class="eyebrow">Carrinho</span>
+              <h2>Seu pedido B2B</h2>
+            </div>
+            <button class="link-btn" data-nav="catalog">Continuar comprando</button>
+          </div>
+          <div id="cartList" class="cart-list"></div>
+        </section>
+      </section>
+
+      <section class="page" id="checkoutPage">
+        <section class="card section-shell">
+          <div class="section-head">
+            <div>
+              <span class="eyebrow">Checkout B2B</span>
+              <h2>Dados da empresa e pagamento</h2>
+            </div>
+          </div>
+          <form class="form-grid" id="checkoutForm"></form>
+        </section>
+      </section>
+
+      <section class="page" id="quotePage">
+        <section class="card section-shell">
+          <div class="section-head">
+            <div>
+              <span class="eyebrow">Solicitação de orçamento</span>
+              <h2>Atendimento comercial corporativo</h2>
+            </div>
+          </div>
+          <form class="form-grid" id="quoteForm"></form>
+        </section>
+      </section>
+
+      <section class="page" id="accountPage">
+        <section class="dashboard-layout">
+          <aside class="card sidebar">
+            <h3>Área do cliente</h3>
+            <nav id="accountMenu"></nav>
+          </aside>
+          <section class="card section-shell" id="accountContent"></section>
+        </section>
+      </section>
+
+      <section class="page" id="adminPage">
+        <section class="dashboard-layout">
+          <aside class="card sidebar">
+            <h3>Painel administrativo</h3>
+            <nav id="adminMenu"></nav>
+          </aside>
+          <section class="card section-shell" id="adminContent"></section>
+        </section>
+      </section>
+
+      <section class="page" id="aboutPage">
+        <section class="card section-shell">
+          <span class="eyebrow">Sobre nós</span>
+          <h2>Especialistas em tecnologia industrial</h2>
+          <p>
+            Um portal B2B pensado para integradores, compradores industriais e equipes técnicas
+            que precisam comparar soluções com clareza, rapidez e confiança.
+          </p>
+        </section>
+      </section>
+
+      <section class="page" id="contactPage">
+        <section class="card section-shell">
+          <span class="eyebrow">Contato</span>
+          <h2>Fale com o time comercial</h2>
+          <p>Orçamentos, integrações, grandes volumes e projetos sob medida.</p>
+        </section>
+      </section>
+
+      <section class="page" id="solutionsPage"></section>
+      <section class="page" id="educationPage"></section>
+      <section class="page" id="favoritesPage"></section>
+    </main>
+
+    <div class="toast" id="toast" aria-live="polite"></div>
+    <script src="app.js"></script>
+  </body>
+</html>
