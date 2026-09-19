@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscrição / Contato</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5 mb-5">
+        <!-- Card container -->
+        <div class="card">
+            <div class="card-body">
+                <!-- Título -->
+                <h2 class="mb-3">Inscrição / Contato</h2>
+                
+                <!-- Descrição -->
+                <p class="text-muted mb-4">
+                    Preencha os campos abaixo. Campos marcados com <span class="text-danger">*</span> são obrigatórios.
+                </p>
+
+                <!-- Formulário -->
+                <form>
+                    <!-- PRIMEIRA LINHA: Nome e Sobrenome -->
+                    <div class="row">
+                        <!-- Coluna 1: Nome -->
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="nome" class="form-label">
+                                    Nome <span class="text-danger">*</span>
+                                </label>
+                                <input 
+                                    type="text" 
+                                    class="form-control" 
+                                    id="nome" 
+                                    placeholder="João"
+                                >
+                            </div>
+                        </div>
+
+                        <!-- Coluna 2: Sobrenome -->
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="sobrenome" class="form-label">
+                                    Sobrenome <span class="text-danger">*</span>
+                                </label>
+                                <input 
+                                    type="text" 
+                                    class="form-control" 
+                                    id="sobrenome" 
+                                    placeholder="Silva"
+                                >
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SEGUNDA LINHA: Email e Telefone -->
+                    <div class="row">
+                        <!-- Coluna 1: Email -->
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="email" class="form-label">
+                                    Email <span class="text-danger">*</span>
+                                </label>
+                                <input 
+                                    type="email" 
+                                    class="form-control" 
+                                    id="email" 
+                                    placeholder="nome@exemplo.com"
+                                >
+                            </div>
+                        </div>
+
+                        <!-- Coluna 2: Telefone -->
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="telefone" class="form-label">
+                                    Telefone
+                                </label>
+                                <input 
+                                    type="tel" 
+                                    class="form-control" 
+                                    id="telefone" 
+                                    placeholder="(11) 91234-5678"
+                                >
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- TERCEIRA LINHA: CPF e Data de Nascimento -->
+                    <div class="row">
+                        <!-- Coluna 1: CPF -->
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="cpf" class="form-label">
+                                    CPF <span class="text-danger">*</span>
+                                </label>
+                                <input 
+                                    type="text" 
+                                    class="form-control" 
+                                    id="cpf" 
+                                    placeholder="000.000.000-00"
+                                >
+                            </div>
+                        </div>
+
+                        <!-- Coluna 2: Data de Nascimento -->
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="dataNasc" class="form-label">
+                                    Data de nascimento
+                                </label>
+                                <input 
+                                    type="date" 
+                                    class="form-control" 
+                                    id="dataNasc" 
+                                    placeholder="dd/mm/aaaa"
+                                >
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- QUARTA LINHA: Senha e Função -->
+                    <div class="row">
+                        <!-- Coluna 1: Senha -->
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="senha" class="form-label">
+                                    Senha <span class="text-danger">*</span>
+                                </label>
+                                <input 
+                                    type="password" 
+                                    class="form-control" 
+                                    id="senha" 
+                                    placeholder="Mínimo 6 caracteres"
+                                >
+                            </div>
+                        </div>
+
+                        <!-- Coluna 2: Função (Select) -->
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="funcao" class="form-label">
+                                    Função
+                                </label>
+                                <select 
+                                    class="form-select" 
+                                    id="funcao"
+                                >
+                                    <option selected>Escolha...</option>
+                                    <option value="dev">Desenvolvedor</option>
+                                    <option value="designer">Designer</option>
+                                    <option value="gerente">Gerente</option>
+                                    <option value="outro">Outro</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                                        <!-- QUINTA LINHA: Usuário -->
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="mb-3">
+                                <label for="usuario" class="form-label">
+                                    Usuário
+                                </label>
+                                <!-- input-group: agrupa input com ícone/prefixo -->
+                                <div class="input-group">
+                                    <!-- Prefixo @ -->
+                                    <span class="input-group-text">@</span>
+                                    <input 
+                                        type="text" 
+                                        class="form-control" 
+                                        id="usuario" 
+                                        placeholder="nomeusuario"
+                                    >
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SEXTA LINHA: Mensagem (Textarea) -->
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="mb-3">
+                                <label for="mensagem" class="form-label">
+                                    Mensagem
+                                </label>
+                                <textarea 
+                                    class="form-control" 
+                                    id="mensagem" 
+                                    rows="5"
+                                    placeholder="Escreva aqui..."
+                                ></textarea>
+                            </div>
+                        </div>
+                        
+                    </div>
+                                        <!-- SÉTIMA LINHA: Upload de Currículo -->
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="mb-3">
+                                <label for="curriculo" class="form-label">
+                                    Upload de Currículo (PDF)
+                                </label>
+                                <div class="input-group">
+                                    <button 
+                                        class="btn btn-outline-secondary" 
+                                        type="button"
+                                    >
+                                        Escolher arquivo
+                                    </button>
+                                    <input 
+                                        type="file" 
+                                        class="form-control" 
+                                        id="curriculo"
+                                        accept=".pdf"
+                                    >
+                                </div>
+                                <small class="text-muted d-block mt-2">
+                                    Máx. 5MB. Apenas PDF.
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- OITAVA LINHA: Checkboxes e Radio Buttons -->
+                    <div class="row">
+                        <div class="col-12">
+                            <!-- Checkbox -->
+                            <div class="form-check mb-3">
+                                <input 
+                                    class="form-check-input" 
+                                    type="checkbox" 
+                                    id="novidades"
+                                >
+                                <label class="form-check-label" for="novidades">
+                                    Quero receber novidades
+                                </label>
+                            </div>
+
+                            <!-- Radio Buttons -->
+                            <div class="mb-3">
+                                <p class="mb-2">Contato por:</p>
+                                
+                                <div class="form-check">
+                                    <input 
+                                        class="form-check-input" 
+                                        type="radio" 
+                                        name="contato" 
+                                        id="contatoEmail"
+                                        value="email"
+                                        checked
+                                    >
+                                    <label class="form-check-label" for="contatoEmail">
+                                        Contato por email
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <input 
+                                        class="form-check-input" 
+                                        type="radio" 
+                                        name="contato" 
+                                        id="contatoTel"
+                                        value="telefone"
+                                    >
+                                    <label class="form-check-label" for="contatoTel">
+                                        Contato por telefone
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                                        <!-- NONA LINHA: Botões -->
+                    <div class="row mt-4">
+                        <div class="col-12">
+                            <button 
+                                type="submit" 
+                                class="btn btn-primary"
+                            >
+                                Enviar
+                            </button>
+                            <button 
+                                type="reset" 
+                                class="btn btn-outline-secondary ms-2"
+                            >
+                                Limpar
+                            </button>
+                        </div>
+                    </div>
+
+                </form>
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
